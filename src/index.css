@@ -1,0 +1,219 @@
+@import url('https://api.fontshare.com/v2/css?f[]=neue-montreal@400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap');
+@import "lenis/dist/lenis.css";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --animate-fade-in-down: fade-in-down 0.2s ease-out;
+  --animate-star-btn: star-btn var(--duration, 8s) linear infinite;
+
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes star-btn {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+}
+
+@keyframes star-pop {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-star-pop {
+  animation: star-pop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes star-shimmer {
+  0% {
+    filter: brightness(1) drop-shadow(0 0 0px rgba(233,30,140,0));
+  }
+  25% {
+    filter: brightness(1.75) drop-shadow(0 0 12px rgba(255,255,255,0.95));
+  }
+  50%, 100% {
+    filter: brightness(1) drop-shadow(0 0 0px rgba(233,30,140,0));
+  }
+}
+
+.animate-star-shimmer {
+  animation: star-shimmer 3.2s ease-in-out infinite;
+}
+
+@keyframes shimmer-pass {
+  0%   { transform: translateX(-120%) skewX(-15deg); }
+  100% { transform: translateX(220%) skewX(-15deg); }
+}
+
+.shimmer {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 45%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 100%
+  );
+  animation: shimmer-pass 2.8s ease-in-out infinite;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 10;
+}
+
+@keyframes hand-reach-left {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hand-reach-right {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-hand-left {
+  animation: hand-reach-left 3.2s cubic-bezier(0.16, 1, 0.3, 1) 0s both;
+}
+
+.animate-hand-right {
+  animation: hand-reach-right 3.2s cubic-bezier(0.16, 1, 0.3, 1) 0s both;
+}
+
+.animate-float-left {
+  animation: float-left 4.2s ease-in-out -1.5s infinite alternate;
+}
+
+.animate-float-right {
+  animation: float-right 4.6s ease-in-out -2.2s infinite alternate;
+}
+
+@keyframes float-left {
+  0% {
+    transform: translateY(0) scale(1.08) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-12px) translateY(-24px) scale(1.11) rotate(-2.2deg);
+  }
+  100% {
+    transform: translateX(10px) translateY(18px) scale(1.05) rotate(1.8deg);
+  }
+}
+
+@keyframes float-right {
+  0% {
+    transform: translateY(0) scale(1.08) rotate(0deg);
+  }
+  50% {
+    transform: translateX(12px) translateY(24px) scale(1.11) rotate(2.2deg);
+  }
+  100% {
+    transform: translateX(-10px) translateY(-18px) scale(1.05) rotate(-1.8deg);
+  }
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Neue Montreal', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+    background-color: #000;
+    color: #fff;
+  }
+
+  /* Hide scrollbar — all browsers */
+  * {
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE / Edge */
+  }
+  *::-webkit-scrollbar {
+    display: none;                /* Chrome / Safari / Opera */
+  }
+}
+
+/* Bento Grid System for Solution Section */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.75rem;
+  width: 100%;
+}
+
+.bento-card {
+  background: #fbfbfb;
+  border-radius: 24px;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.bento-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  text-align: left;
+}
+
+.bento-card-title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #111;
+  letter-spacing: -0.022em;
+  margin: 0;
+}
+
+.bento-card-subtitle {
+  font-size: 1.1rem;
+  color: #888;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .bento-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+}
+
