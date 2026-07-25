@@ -104,9 +104,9 @@ export const PricingSection: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
   return (
-    <section className="relative py-16 md:py-24 bg-white text-neutral-900 overflow-hidden select-none px-2 sm:px-4 lg:px-6">
-      {/* Moldura Cinza Claro (#fbfbfb, rounded-[36px], sem borda) */}
-      <div className="max-w-[90rem] mx-auto bg-[#fbfbfb] rounded-[36px] px-5 sm:px-8 md:px-10 py-10 md:py-14 relative z-10">
+    <section className="relative py-16 md:py-24 bg-white text-neutral-900 overflow-hidden select-none px-2 sm:px-4 lg:px-6 w-full">
+      {/* Moldura Cinza Claro Ampliada ponta a ponta (#fbfbfb, rounded-[36px], sem borda) */}
+      <div className="w-full max-w-[98%] 2xl:max-w-[104rem] mx-auto bg-[#fbfbfb] rounded-[36px] px-5 sm:px-8 md:px-10 py-10 md:py-14 relative z-10">
         
         {/* --- Header da Seção --- */}
         <div className="flex flex-col items-center text-center mb-12">

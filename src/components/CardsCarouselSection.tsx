@@ -226,13 +226,13 @@ export default function CardsCarouselSection({
               return (
                 <div
                   key={card.id}
-                  style={{ flex: `0 0 calc(${100 / cardsPerPage}% - ${(28 * (cardsPerPage - 1)) / cardsPerPage}px)` }}
+                  style={{ flex: cardsPerPage === 1 ? '0 0 100%' : `0 0 calc(${100 / cardsPerPage}% - ${(28 * (cardsPerPage - 1)) / cardsPerPage}px)` }}
                   className="min-w-0"
                 >
                   <motion.div
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
                     transition={{
                       duration: 0.65,
                       delay: index * 0.12,

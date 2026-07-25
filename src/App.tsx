@@ -8,6 +8,8 @@ import { ScrollTextSection } from './components/ScrollTextSection';
 import { ProblemsSection } from './components/ProblemsSection';
 import { SolutionSection } from './components/SolutionSection';
 import CardsCarouselSection from './components/CardsCarouselSection';
+import CommunitySection from './components/CommunitySection';
+import TestimonialsSection from './components/TestimonialsSection';
 import PricingSection from './components/PricingSection';
 import FooterSection from './components/FooterSection';
 import { SparklesText } from './components/ui/sparkles-text';
@@ -67,61 +69,25 @@ export const App: React.FC = () => {
         }}
       >
         {/* Background split hands animation using clipPath & composable float — zIndex 10 to layer OVER headline */}
-        <div
-          className="animate-hand-left"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            width: '100%',
-            height: '100%',
-            zIndex: 10,
-            pointerEvents: 'none',
-          }}
-        >
+        <div className="animate-hand-left hero-hand-container">
           <img
             src="/maos.png"
             alt=""
             aria-hidden="true"
             loading="eager"
             decoding="sync"
-            className="animate-float-left"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              objectPosition: 'center bottom',
-              clipPath: 'polygon(0 0, calc(50% - 1px) 0, calc(50% - 1px) 100%, 0 100%)',
-              imageRendering: 'high-quality' as React.CSSProperties['imageRendering'],
-            }}
+            className="animate-float-left hero-hand-img hero-hand-img-left"
           />
         </div>
 
-        <div
-          className="animate-hand-right"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            width: '100%',
-            height: '100%',
-            zIndex: 10,
-            pointerEvents: 'none',
-          }}
-        >
+        <div className="animate-hand-right hero-hand-container">
           <img
             src="/maos.png"
             alt=""
             aria-hidden="true"
             loading="eager"
             decoding="sync"
-            className="animate-float-right"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              objectPosition: 'center bottom',
-              clipPath: 'polygon(calc(50% - 2px) 0, 100% 0, 100% 100%, calc(50% - 2px) 100%)',
-              imageRendering: 'high-quality' as React.CSSProperties['imageRendering'],
-            }}
+            className="animate-float-right hero-hand-img hero-hand-img-right"
           />
         </div>
         {/* Hero Content — zIndex 1 so hands float ON TOP of headline */}
@@ -224,7 +190,13 @@ export const App: React.FC = () => {
       {/* ── SECTION 5: CAROUSEL ── */}
       <CardsCarouselSection />
 
-      {/* ── SECTION 6: PRICING ── */}
+      {/* ── SECTION 6: COMMUNITY ── */}
+      <CommunitySection />
+
+      {/* ── SECTION 7: TESTIMONIALS ── */}
+      <TestimonialsSection />
+
+      {/* ── SECTION 8: PRICING ── */}
       <PricingSection />
 
       {/* ── SECTION 7: FOOTER ── */}

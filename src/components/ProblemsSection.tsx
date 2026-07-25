@@ -91,6 +91,7 @@ const ProblemCard: React.FC<ProblemCardProps> = ({
 
       {/* Inner Content Card */}
       <div
+        className="problem-card-inner"
         style={{
           background: '#fff',
           borderRadius: '19px', // slightly smaller to match outer radius (24px - 5px)
@@ -114,6 +115,7 @@ const ProblemCard: React.FC<ProblemCardProps> = ({
             ease: [0.16, 1, 0.3, 1],
             delay: idx * 0.25 + 0.2, // animates in after the card container starts expanding
           }}
+          className="problem-card-icon-container"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -135,6 +137,7 @@ const ProblemCard: React.FC<ProblemCardProps> = ({
             ease: [0.16, 1, 0.3, 1],
             delay: idx * 0.25 + 0.35, // animates in shortly after the icon
           }}
+          className="problem-card-text-container"
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -144,6 +147,7 @@ const ProblemCard: React.FC<ProblemCardProps> = ({
         >
           {/* Card Title */}
           <h3
+            className="problem-card-title"
             style={{
               fontSize: '2.75rem',
               fontWeight: 400,
@@ -172,6 +176,7 @@ const ProblemCard: React.FC<ProblemCardProps> = ({
             {items.map((item, itemIdx) => (
               <li
                 key={itemIdx}
+                className="problem-card-item"
                 style={{
                   display: 'flex',
                   alignItems: 'flex-start',
@@ -221,7 +226,7 @@ export const ProblemsSection: React.FC = () => {
 
   const cards = [
     {
-      icon: <img src="/agenda.png" alt="Agenda no WhatsApp" style={{ width: '360px', height: '360px', objectFit: 'contain' }} />,
+      icon: <img src="/agenda.png" alt="Agenda no WhatsApp" className="problem-card-icon" style={{ width: '360px', height: '360px', objectFit: 'contain' }} />,
       title: <>Agenda no <strong>WhatsApp</strong></>,
       items: [
         <><strong>Mensagens o dia inteiro</strong>, mesmo durante o atendimento</>,
@@ -231,7 +236,7 @@ export const ProblemsSection: React.FC = () => {
       ],
     },
     {
-      icon: <img src="/=financeiro icon.png" alt="Financeiro" style={{ width: '360px', height: '360px', objectFit: 'contain' }} />,
+      icon: <img src="/=financeiro icon.png" alt="Financeiro" className="problem-card-icon" style={{ width: '360px', height: '360px', objectFit: 'contain' }} />,
       title: <><strong>Financeiro</strong> no caderno</>,
       items: [
         <>Sem saber quanto ganhou no mês — <strong>só chutando</strong></>,
@@ -241,7 +246,7 @@ export const ProblemsSection: React.FC = () => {
       ],
     },
     {
-      icon: <img src="/clientes icon.png" alt="Sem histórico" style={{ width: '360px', height: '360px', objectFit: 'contain' }} />,
+      icon: <img src="/clientes icon.png" alt="Sem histórico" className="problem-card-icon" style={{ width: '360px', height: '360px', objectFit: 'contain' }} />,
       title: <>Sem <strong>histórico</strong> das clientes</>,
       items: [
         <>Não lembra as <strong>preferências e alergias</strong> de cada uma</>,
@@ -329,6 +334,7 @@ export const ProblemsSection: React.FC = () => {
         {/* 3 Cards Grid */}
         <div
           ref={sectionRef}
+          className="problems-grid"
           style={{
             width: '100%',
             display: 'grid',
