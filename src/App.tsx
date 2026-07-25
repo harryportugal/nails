@@ -54,6 +54,7 @@ export const App: React.FC = () => {
     >
       {/* ── SECTION 1: HERO ── */}
       <section
+        className="hero-section"
         style={{
           position: 'relative',
           height: '100vh',

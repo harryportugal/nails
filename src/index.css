@@ -411,3 +411,30 @@
   }
 }
 
+/* Hero paddingBottom for tall mobile phones (S23 Ultra, Pixel, etc.)
+   These devices have aspect ratios > 19:9 so the hero content sinks too low.
+   Targeting by screen height pushes content UP from the bottom. */
+@media (max-width: 640px) and (min-height: 800px) {
+  .hero-section {
+    padding-bottom: 7rem !important;
+  }
+}
+
+@media (max-width: 640px) and (min-height: 900px) {
+  .hero-section {
+    padding-bottom: 10rem !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) and (min-height: 800px) {
+  .hero-section {
+    padding-bottom: 8rem !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) and (min-height: 900px) {
+  .hero-section {
+    padding-bottom: 11rem !important;
+  }
+}
+
