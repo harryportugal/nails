@@ -63,7 +63,6 @@ export const App: React.FC = () => {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'flex-end',
-          paddingBottom: '3rem',
           paddingLeft: '1rem',
           paddingRight: '1rem',
           background: '#fff',
