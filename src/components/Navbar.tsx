@@ -44,7 +44,7 @@ export const Navbar: React.FC = () => {
       >
         {/* Brand Logo */}
         <img
-          src="/logo-basenails.png"
+          src="/logo-basenails.webp"
           alt="Base Nails"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           style={{

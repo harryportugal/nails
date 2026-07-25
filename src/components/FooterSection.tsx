@@ -67,7 +67,7 @@ export const FooterSection: React.FC = () => {
             <div className="md:col-span-6 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-5">
-                  <img src="/logo-basenails.png" alt="Base Nails" className="h-9 w-auto" />
+                  <img src="/logo-basenails.webp" alt="Base Nails" className="h-9 w-auto" />
                 </div>
                 <p className="text-neutral-600 text-base font-normal leading-relaxed max-w-md mb-8">
                   O sistema definitivo de agendamento e gestão desenvolvido exclusivamente para Nail Designers e Esmalterias.

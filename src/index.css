@@ -404,5 +404,10 @@
     line-height: 1.15 !important;
     letter-spacing: -0.02em !important;
   }
+
+  /* Move Hero CTA button slightly up on larger mobile screens */
+  .hero-cta-wrapper {
+    margin-top: 1.25rem !important;
+  }
 }
 

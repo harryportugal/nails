@@ -71,7 +71,7 @@ export const App: React.FC = () => {
         {/* Background split hands animation using clipPath & composable float — zIndex 10 to layer OVER headline */}
         <div className="animate-hand-left hero-hand-container">
           <img
-            src="/maos.png"
+            src="/maos.webp"
             alt=""
             aria-hidden="true"
             loading="eager"
@@ -82,7 +82,7 @@ export const App: React.FC = () => {
 
         <div className="animate-hand-right hero-hand-container">
           <img
-            src="/maos.png"
+            src="/maos.webp"
             alt=""
             aria-hidden="true"
             loading="eager"
@@ -158,6 +158,7 @@ export const App: React.FC = () => {
           </Copy>
 
           <div
+            className="hero-cta-wrapper"
             style={{
               marginTop: '2.25rem',
               display: 'flex',

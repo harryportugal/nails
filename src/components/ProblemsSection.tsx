@@ -226,7 +226,7 @@ export const ProblemsSection: React.FC = () => {
 
   const cards = [
     {
-      icon: <img src="/agenda.png" alt="Agenda no WhatsApp" className="problem-card-icon" style={{ width: '360px', height: '360px', objectFit: 'contain' }} />,
+      icon: <img src="/agenda.webp" alt="Agenda no WhatsApp" className="problem-card-icon" style={{ width: '360px', height: '360px', objectFit: 'contain' }} />,
       title: <>Agenda no <strong>WhatsApp</strong></>,
       items: [
         <><strong>Mensagens o dia inteiro</strong>, mesmo durante o atendimento</>,
@@ -236,7 +236,7 @@ export const ProblemsSection: React.FC = () => {
       ],
     },
     {
-      icon: <img src="/=financeiro icon.png" alt="Financeiro" className="problem-card-icon" style={{ width: '360px', height: '360px', objectFit: 'contain' }} />,
+      icon: <img src="/financeiro-icon.webp" alt="Financeiro" className="problem-card-icon" style={{ width: '360px', height: '360px', objectFit: 'contain' }} />,
       title: <><strong>Financeiro</strong> no caderno</>,
       items: [
         <>Sem saber quanto ganhou no mês — <strong>só chutando</strong></>,
@@ -246,7 +246,7 @@ export const ProblemsSection: React.FC = () => {
       ],
     },
     {
-      icon: <img src="/clientes icon.png" alt="Sem histórico" className="problem-card-icon" style={{ width: '360px', height: '360px', objectFit: 'contain' }} />,
+      icon: <img src="/clientes-icon.webp" alt="Sem histórico" className="problem-card-icon" style={{ width: '360px', height: '360px', objectFit: 'contain' }} />,
       title: <>Sem <strong>histórico</strong> das clientes</>,
       items: [
         <>Não lembra as <strong>preferências e alergias</strong> de cada uma</>,

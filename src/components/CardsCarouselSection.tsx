@@ -212,13 +212,17 @@ export default function CardsCarouselSection({
         >
           <motion.div
             className="flex gap-7"
+            style={{ willChange: 'transform' }}
             animate={{
-              x: `-${currentIndex * (100 / cardsPerPage)}%`
+              x: cardsPerPage === 1
+                ? `calc(-${currentIndex * 100}% - ${currentIndex * 28}px)`
+                : `-${currentIndex * (100 / cardsPerPage)}%`
             }}
             transition={{
               type: "spring",
-              stiffness: 260,
-              damping: 28
+              stiffness: 300,
+              damping: 34,
+              mass: 0.9
             }}
           >
             {cards.map((card, index) => {
